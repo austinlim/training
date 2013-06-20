@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TrainingRails4</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+
+	<div id="templatemo_body_wrapper">
+	<div id="templatemo_wrapper">
+    	
+        <div id="templatemo_header">
+            <div id="site_title"><h1><a href="http://www.templatemo.com">Free CSS Templates</a></h1></div>
+            <div id="templatemo_menu">
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="blog.html">Blog</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a class="last">Sign up</a></li>
+                </ul>
+            </div> <!-- end of templatemo_menu -->
+        </div><!-- end of header -->
+   
+
+    <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>  
+    <%= content_tag :h1, controller_name %>
+    <%= yield %> 
+    
+    <script type="text/javascript" charset="utf-8" async defer>
+    msg();
+    </script>
+  </div>
+  </div>
+
+</body>
+</html>
+

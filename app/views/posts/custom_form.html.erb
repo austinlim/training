@@ -1,0 +1,65 @@
+<h1>Custom Form</h1>
+
+<%= form_tag(process_custom_data_posts_path) do %>
+<%= label_tag(:q, "Search for:") %>
+<%= text_field_tag(:q) %>
+<%= text_field_tag(:query_1) %>
+<%= text_field_tag(:query_2) %>
+<%= submit_tag("Search") %>
+<br>
+<%= check_box_tag(:pet_dog) %>
+<%= label_tag(:pet_dog, "I own a dog") %>
+<%= check_box_tag(:pet_cat) %>
+<%= label_tag(:pet_cat, "I own a cat") %>
+<br>
+<%= radio_button_tag(:age, "child") %>
+<%= label_tag(:age_child, "I am younger than 21") %>
+<%= radio_button_tag(:age, "adult") %>
+<%= label_tag(:age_adult, "I'm over 21") %>
+<%= radio_button_tag(:old_age, "child1") %>
+<%= label_tag(:age_child, "I am younger than 211") %>
+<%= radio_button_tag(:old_age, "adult1") %>
+<%= label_tag(:age_adult, "I'm over 211") %>
+<br>
+message
+<%= text_area_tag(:message, "Hi, nice site", size: "24x6") %>
+<br>
+password
+<%= password_field_tag(:password) %>
+<br>
+parent_id
+<%= hidden_field_tag(:parent_id, "5") %>
+<br>
+name
+<%= search_field(:user, :name) %>
+<br>
+phone
+<%= telephone_field(:user, :phone) %>
+<br>
+born_on
+<%= date_field(:user, :born_on) %>
+<br>
+meeting_time
+<%= datetime_field(:user, :meeting_time) %>
+<br>
+graduation_day
+<%= datetime_local_field(:user, :graduation_day) %>
+<br>
+birthday_month
+<%= month_field(:user, :birthday_month) %>
+<br>
+birthday_week
+<%= week_field(:user, :birthday_week) %>
+<br>
+homepage
+<%= url_field(:user, :homepage) %>
+<br>
+address
+<%= email_field(:user, :address) %>
+<br>
+favorite_color
+<%= color_field(:user, :favorite_color) %>
+<br>
+started_at
+<%= time_field(:task, :started_at) %>
+<% end %>	

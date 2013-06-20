@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi, <%= @user.username %></h1>
+    <p>
+      You have successfully post to example.com,
+      Your title is: <%= @post.title %>.<br/>
+	  Your content is: <%= @post.content %><br/>
+	  <%= image_tag attachments['startrek.jpg'].url %>
+    </p>
+    <p>
+      To login to the site, just follow this link: <%= user_post_url(@user, @post) %>
+    </p>
+    <p>Thanks for posting and have a great day!</p>
+  </body>
+</html>
