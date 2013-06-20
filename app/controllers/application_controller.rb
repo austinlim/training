@@ -8,6 +8,8 @@ class ApplicationController < ActionController::Base
   before_filter :authenticate_user!
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
+  #testing push to server
+
   protected
 
   def configure_permitted_parameters
